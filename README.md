@@ -54,3 +54,11 @@ sudo dpkg -i virtualbox-7.0_7.0.6-155176~Ubuntu~jammy_amd64.deb
 sudo apt -f install
 sudo dpkg -r virtualbox-7.0
 ```
+## Задание 5
+- Выложить историю команд в терминале ubuntu.
+
+_Список команд для выполнения задания:_
+```
+history > commands.txt
+```
+После выполнения команды история команд будет записана в файл [commands.txt](/part1_linux/commands.txt)

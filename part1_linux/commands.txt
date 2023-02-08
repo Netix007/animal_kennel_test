@@ -1,0 +1,847 @@
+    1  sudo apt update
+    2  sudo apt upgrade
+    3  sudo apt install ssh perl gcc make mc
+    4  ip a
+    5  mc
+    6  ip a
+    7  pwd
+    8  ls
+    9  ls -a
+   10  ll
+   11  cat > file1
+   12  cat > file2
+   13  cat file 1 file2 > file3
+   14  pwd
+   15  cat file1 file2 > file3
+   16  ll
+   17  cat file3
+   18  mv file3 file_itog
+   19  ll
+   20  cat > file5
+   21  cat > task6
+   22  ll
+   23  mkdir test
+   24  ll
+   25  mv task6 test/
+   26  ll
+   27  cd test
+   28  ll
+   29  ..
+   30  cd ..
+   31  ll
+   32  rm file1
+   33  rm file2
+   34  rm file5
+   35  rm -r test
+   36  ll
+   37  cat > file1
+   38  cp file1 file2
+   39  ll
+   40  rm file_itog
+   41  ll
+   42  ln -s file1 file3
+   43  ll
+   44  ln file1 file4
+   45  ll
+   46  ls -l
+   47  ls -li
+   48  ls -i
+   49  ls -li
+   50  rm file1
+   51  ls -li
+   52  cat file2
+   53  cat file3
+   54  cat file4
+   55  mv file2 fileA
+   56  mv file3 fileB
+   57  mv file4 fileC
+   58  ll
+   59  ls -li
+   60  ls -s fileA file_new
+   61  ls -li
+   62  pwd
+   63  ln -s fileA file_new
+   64  ls -li
+   65  mkdir test
+   66  ls -li
+   67  rm fileB test/
+   68  ls -li
+   69  cat > file1
+   70  ls -li
+   71  ln -s file1 file3
+   72  ls -li
+   73  rm file1
+   74  ls -li
+   75  rm file3 fileA fileC file_new
+   76  ls -li
+   77  cat > file1
+   78  cp file1 file2
+   79  ln -s file1 file3
+   80  ln file1 file4
+   81  ls -li
+   82  rm file1
+   83  ls -li
+   84  mv file2 fileA
+   85  mv file3 fileB
+   86  mv file4 fileC
+   87  ln -s fileA file_new
+   88  ls -li
+   89  mv fileB test/
+   90  mv fileC test/
+   91  mv file_new test/
+   92  ls -li
+   93  cat fileA
+   94  cd test
+   95  ls -li
+   96  учше
+   97  exit
+   98  ip a
+   99  ll
+  100  touch file1
+  101  touch file_new
+  102  ll
+  103  rm fileA
+  104  ll
+  105  touch file, file2
+  106  ll
+  107  rm file file2 file1 file_new
+  108  rm file file2 file1, file_new
+  109  ll
+  110  rm file,
+  111  ll
+  112  touch file file2
+  113  ll
+  114  chmod -u-r file
+  115  ll
+  116  chmod +u-r file
+  117  ll
+  118  rm file
+  119  ll
+  120  touch file
+  121  ll
+  122  chmod ug-r file
+  123  ll
+  124  chmod ug+r file
+  125  ll
+  126  chmod ug+rw o+r
+  127  chmod ug+rw o+r file
+  128  chmod ug-rw file
+  129  ll
+  130  chmod ug+rw file1
+  131  chmod ug+rw file
+  132  ll
+  133  chmod o+r file
+  134  ll
+  135  chmod o-r file
+  136  ll
+  137  chmod o+r file
+  138  ll
+  139  chmod u+rw file2
+  140  ll
+  141  chmod g-rw file2
+  142  ll
+  143  chmod o-r file2
+  144  ll
+  145  chmod u-rw file2
+  146  ll
+  147  chmod 600 file2
+  148  ll
+  149  chmod 000 file
+  150  ll
+  151  chmod 664 file
+  152  ll
+  153  mkdir test
+  154  mkdir test/
+  155  cd test
+  156  ll
+  157  cd ..
+  158  ll
+  159  rm -r test
+  160  ll
+  161  mkdir test
+  162  ll
+  163  cat /etc/passwd
+  164  useradd gb1
+  165  sudo useradd gb1
+  166  cat /etc/passwd
+  167  adduser gb2
+  168  sudo adduser gb2
+  169  cat /etc/passwd
+  170  userdel gb1
+  171  sudo userdel gb1
+  172  cat /etc/passwd
+  173  sudo userdel gb1 gb2
+  174  cat /etc/passwd
+  175  ll
+  176  chown gb1:gb1 test
+  177  chown gb2:gb2 test
+  178  sudo chown gb2:gb2 test
+  179  ll
+  180  sudo chown alex:alex test/
+  181  ll
+  182  groupadd geek
+  183  sudo groupadd geek
+  184  groups
+  185  groups user
+  186  cat etc/group
+  187  cat etc/groups
+  188  cat /etc/group
+  189  groupadd geek2
+  190  sudo groupadd geek2
+  191  cat /etc/group
+  192  addgroup3
+  193  addgroup group3
+  194  sudo addgroup group3
+  195  cat /etc/group
+  196  man addgroup 
+  197  cat /etc/passwd
+  198  su gb2
+  199  sudo usermod -g alex gb2
+  200  su gb2
+  201  sudo usermod -g gb2 gb2
+  202  su gb2
+  203  groups
+  204  sudo groups
+  205  id
+  206  groups
+  207  sudo usermod -a -g gb2 alex
+  208  sudo usermod -a -G gb2 alex
+  209  id
+  210  sudo usermod -a gb2 alex
+  211  id
+  212  sudo usermod -a -G gb2 alex
+  213  id
+  214  groups
+  215  sudo usermod -a -G gb2 alex
+  216  id
+  217  sudo usermod -a -G alex gb2
+  218  id
+  219  sudo usermod -a alex gb2
+  220  sudo usermod -a gb2 alex
+  221  id
+  222  sudo usermod -R gb2 alex
+  223  id
+  224  groupdel gb2
+  225  userdel gb2
+  226  sudo userdel gb2
+  227  groupdel gb2
+  228  sudo groupdel gb2
+  229  id
+  230  sudo cat etc/shadow
+  231  sudo cat /etc/shadow
+  232  cat etc/group
+  233  cat /etc/group
+  234  groupdel group3
+  235  sudo groupdel group3
+  236  cat /etc/group
+  237  sudo groupdel geek2
+  238  sudo groupdel geek
+  239  cat /etc/group
+  240  sudo visudo
+  241  where is apt
+  242  whereis apt
+  243  fg %1
+  244  fg%1
+  245  fg %1
+  246  whereis groupadd
+  247  fg %1
+  248  whereis adduser
+  249  fg %1
+  250  sudo visudo
+  251  apt
+  252  apt update
+  253  whereis apt update
+  254  sudo visudo
+  255  sudo groupadd geek
+  256  groupadd geek
+  257  groupdel geek
+  258  sudo groupdel geek
+  259  sudo apt upgrade
+  260  apt upgrade
+  261  sudo groupdel
+  262  sudo groupdel geek
+  263  cat /etc/group/
+  264  cat /etc/groups/
+  265  cat /etc/group
+  266  sudo visudo
+  267  cat /etc/group
+  268  addgroup developer
+  269  sudo addgroup developer
+  270  cat /etc/group
+  271  sudo useradd -m -s /bin/bash gb1
+  272  sudo useradd -m -s /bin/bash gb2
+  273  cat /etc/passwd
+  274  id
+  275  sudo usermod -aG gb2 developer
+  276  sudo usermod -aG developer gb1, gb2
+  277  sudo usermod -aG developer gb1
+  278  sudo usermod -aG developer gb2
+  279  ll
+  280  rm -R test/
+  281  ll
+  282  mkdir developer
+  283  ll
+  284  cd developer/
+  285  ll developer/
+  286  ll
+  287  cd ..
+  288  ll
+  289  chgrp developer developer/
+  290  sudo chgrp developer developer/
+  291  ll
+  292  cd developer/
+  293  su gb1
+  294  sudo passwd пи1
+  295  fg %1
+  296  sudo passwd gb1
+  297  sudo passwd gb2
+  298  su gb1
+  299  cd ..
+  300  ll
+  301  rm file
+  302  rm file2
+  303  ll
+  304  chmod 770 developer/
+  305  ll
+  306  sudo useradd -m -s /bin/bash gb3
+  307  sudo passwd gb3
+  308  su gb3
+  309  ll
+  310  cd developer/
+  311  ll
+  312  su gb3
+  313  ll
+  314  su gb2
+  315  su gb1
+  316  su gb2
+  317  su gb1
+  318  cd developer/
+  319  su gb1
+  320  ll
+  321  rm file
+  322  ll
+  323  cd ..
+  324  chmod 2770 developer/
+  325  ll
+  326  chmod g+s developer/
+  327  ll
+  328  chmod g+s developer
+  329  ll
+  330  stat developer/
+  331  chmod g+s developer/
+  332  stat developer/
+  333  sudo chmod g+s developer/
+  334  stat developer/
+  335  sudo chmod g-s developer/
+  336  stat developer/
+  337  sudo chmod 2770 developer/
+  338  stat developer/
+  339  sudo chmod 0770 developer/
+  340  stat developer/
+  341  sudo chmod 0770 developer/
+  342  stat developer/
+  343  sudo chmod 0770 developer
+  344  stat developer/
+  345  sudo chmod g-s developer/
+  346  ll
+  347  sudo chmod g-s developer/
+  348  sudo chmod g+s developer/
+  349  ll
+  350  cd developer/
+  351  su gb1
+  352  su gb2 echo 12345 > file
+  353  su gb2
+  354  ll
+  355  rm file
+  356  ll
+  357  mkdir work
+  358  ll
+  359  chmod o+t work/
+  360  ll
+  361  cd work/A
+  362  sudo -u gb1 touch file1
+  363  ll
+  364  rm file1
+  365  cd ..
+  366  chmod g+s, o+t work/
+  367  chmod -g+s, -o+t work/
+  368  chmod g+s o+t work/
+  369  ll
+  370  cd work
+  371  ll
+  372  cd ..
+  373  chmod g+s
+  374  chmod g+s work/
+  375  ll
+  376  sudo chmod g+s work/
+  377  ll
+  378  sudo -u gb1 touch file
+  379  ll
+  380  rm file
+  381  ll
+  382  cd work/
+  383  ll
+  384  sudo -u gb1 touch file
+  385  ll
+  386  sudo -u gb2 echo 123456 > file
+  387  su gb2
+  388  sudo -u gb1 echo 123456 > file
+  389  su gb1
+  390  su gb2
+  391  su gb1
+  392  cd ~
+  393  ll
+  394  rm -r developer/
+  395  ll
+  396  mkdir test
+  397  ll
+  398  cd test
+  399  ll
+  400  touch file{1,9}
+  401  ll
+  402  touch file{1..9}
+  403  ll
+  404  cd ..
+  405  ll
+  406  chmod u-r test/
+  407  ll
+  408  ll test/
+  409  cd test/
+  410  ll
+  411  cat file1
+  412  echo 122343565465 > file1
+  413  cat file1
+  414  ll
+  415  cd ~
+  416  sudo usermod -aG gb2 sudo
+  417  sudo usermod -aG sudo gb1
+  418  su gb1
+  419  ip a
+  420  sudo apt update
+  421  apt list --upgradable
+  422  man userdel
+  423  fg %1
+  424  userdel -r gb1
+  425  sudo userdel -r gb1
+  426  userdel -r gb2
+  427  sudo userdel -r gb2
+  428  sudo userdel -r gb3
+  429  cat /etc/passwd
+  430  cat /etc/group
+  431  groupdel gb1
+  432  sudogroupdel gb1
+  433  sudo sudogroupdel gb1
+  434  cat /etc/group
+  435  groupdel gb1
+  436  sudo groupdel gb1
+  437  cat /etc/group
+  438  sudo groupdel developer 
+  439  cat /etc/group
+  440  cd
+  441  ll
+  442  rm -r test
+  443  sudo rm -r test
+  444  ll
+  445  sudo apt apdate
+  446  sudo apt apgrade
+  447  sudo apt upgrade
+  448  sudo apt search nginx
+  449  sudo apt search nginx | wc -l
+  450  sudo apt search nginx : less
+  451  sudo apt search nginx | less
+  452  sudo apt list nginx
+  453  lsb_release 
+  454  lsb_release -a
+  455  sudo apt autoremove
+  456  sudo apt update
+  457  sudo apt upgrade
+  458  sudo apt-get install     ca-certificates     curl     gnupg     lsb-release
+  459  sudo mkdir -p /etc/apt/keyrings
+  460  curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+  461  echo   "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
+  462    $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+  463  sudo apt update
+  464  sudo apt install docker-ce docker-ce-cli containerd.io docker-compose-plugin
+  465  ls
+  466  cd downloads
+  467  cd Downloads
+  468  wget https://download.virtualbox.org/virtualbox/6.1.38/virtualbox-6.1_6.1.38-153438~Ubuntu~jammy_amd64.deb
+  469  dpkg -i virtualbox-6.1_6.1.38-153438~Ubuntu~jammy_amd64.deb
+  470  sudo dpkg -i virtualbox-6.1_6.1.38-153438~Ubuntu~jammy_amd64.deb
+  471  sudo -f install
+  472  sudo apt -f install
+  473  sudo dpkg -i virtualbox-6.1_6.1.38-153438~Ubuntu~jammy_amd64.deb
+  474  dpkg -r virtualbox
+  475  sudo -r virtualbox
+  476  sudo dpkg -r virtualbox
+  477  sudo dpkg -r virtualbox-6.1
+  478  sudo dpkg -r virtualbox*
+  479  sudo add-apt-repository ppa:ondrej/php
+  480  sudo apt update
+  481  sudo del-apt-repository ppa:ondrej/php
+  482  sudo delete-apt-repository ppa:ondrej/php
+  483  deb https://ppa.launchpadcontent.net/ondrej/php/ubuntu
+  484  sudo apt php-amqp
+  485  sudo apt install php-amqp
+  486  sudo apt purge php-amqp
+  487  cd etc/apt/sources.list.d
+  488  cd etc/apt/
+  489  cd /etc/apt/
+  490  ls
+  491  cd sources.list.d/
+  492  ll
+  493  sudo rm ondrej-ubuntu-php-jammy.list
+  494  sudo apt update
+  495  snap search gimp
+  496  sudo snap install gimp
+  497  snap remove gimp
+  498  sudo snap remove gimp
+  499  snap list
+  500  cd
+  501  nano /etc/crontab
+  502  sudo nano /etc/crontab
+  503  date >> date.log
+  504  cat date.log
+  505  whereis date
+  506  /usr/bin/date >> /home/alex/date.log
+  507  cat date.log
+  508  fg %1
+  509  nano /etc/crontab
+  510  sudo nano /etc/crontab
+  511  cat date.log
+  512  sudo nano /etc/crontab
+  513  cat date.log
+  514  sudo nano /etc/crontab
+  515  crontab -e
+  516  cd /var/spool/cron/crontabs/
+  517  sudo cd /var/spool/cron/crontabs/
+  518  ll /var/spool/cron/crontabs/
+  519  sudo ls -la /var/spool/cron/crontabs/
+  520  tar -zcf /var/backups/home.tgz /home/
+  521  tar -zcf /var/backups/home.tgz /home/alex/
+  522  sudo tar -zcf /var/backups/home.tgz /home/alex/
+  523  ll -d /var/backups/
+  524  cd /var/backups/
+  525  mkdir alex
+  526  sudo mkdir alexbackups
+  527  ll
+  528  sudo chown alex:alex alexbackups/
+  529  ll
+  530  tar -zcf /var/backups/alexbackups/home.tgz /home/alex/
+  531  ll
+  532  cd alexbackups/
+  533  ll
+  534  sudo cd /var/spool/cron/crontabs/
+  535  cd /var/spool/cron/crontabs/
+  536  sudocd /var/spool/cron/crontabs/
+  537  sudo cd /var/spool/cron/crontabs/
+  538  crontab -e
+  539  clear
+  540  ip
+  541  ip a
+  542  ping 08:00:27:72:99:a6
+  543  ip -s a
+  544  map ip
+  545  ip r
+  546  ll /sys/class/net
+  547  sudo -i
+  548  apt update
+  549  sudo -i
+  550  sudo apt update
+  551  ping ya.ru
+  552  fg %1
+  553  sudo -i
+  554  ip a
+  555  sudo -i
+  556  ip r
+  557  ip a
+  558  sudo -i
+  559  ip a
+  560  ip address 
+  561  ip address -h
+  562  ip address --h
+  563  man ip adress
+  564  cd /etc/network/
+  565  ll
+  566  ls
+  567  sodo -i
+  568  sudo -i
+  569  ip a
+  570  cd 
+  571  sudo -i
+  572  sudo iptables -P INPUT DROP
+  573  sudo -i
+  574  iptables -L
+  575  sudo iptables -L
+  576  iptables -L
+  577  sodo -i
+  578  sudo -i
+  579  ip a
+  580  apt update
+  581  sudo apt update
+  582  sudo iptables -L
+  583  sudo iptables -P INPUT DROP
+  584  ip a
+  585  sudo iptables -P INPUT ACCEPT
+  586  iptables -L
+  587  sudo -i
+  588  iptables -L
+  589  sudo -i
+  590  iptables -t nat -I PREROUTING -p TCP --dport 8090 -j REDIRECT --to-port 80
+  591  iptables -t nat -I PREROUTING -p TCP --dport=8090 -j REDIRECT --to-port=80
+  592  iptables -t nat -I PREROUTING -p TCP --dport=8080 -j REDIRECT --to-port=80
+  593  sudo -i
+  594  ip a
+  595  sudo -i
+  596  apt install libapache2-mod-php8.1 php8.1 php8.1-fpm
+  597  sudo -i
+  598  ip a;
+  599  ip a
+  600  sudo -i
+  601  sudo apt install docker.io docker-compose
+  602  sudo -i
+  603  cd
+  604  mkdir wordpress
+  605  cd wordpress
+  606  mkdir nginx-conf
+  607  nano nginx-conf/nginx.conf
+  608  ll
+  609  nano .env
+  610  MYSQL_ROOT_PASSWORD=fdjhgf_fhdfh1111!
+  611  MYSQL_USER=alex
+  612  nano .dockerignore
+  613  git init
+  614  nano .gitignore
+  615  ls -l
+  616  ls -la
+  617  nano docker-compose.yml
+  618  вщслук
+  619  docker
+  620  docker image
+  621  docker images
+  622  sudo -i
+  623  nano docker-compose.yml
+  624  docker-compose up -d
+  625  sudo docker-compose up -d
+  626  sudo ss -tnlp
+  627  docker-compose ps
+  628  sudo docker-compose ps
+  629  sudo docker-compose down
+  630  docker-compose ps
+  631  sudo docker-compose ps
+  632  nano docker-compose.yml
+  633  cp docker-compose.yml docker-compose1.yml
+  634  ll
+  635  sudo docker-compose1 up -d
+  636  nano docker-compose.yml
+  637  sudo docker-compose up -d
+  638  docker-compose ps
+  639  sudo docker-compose ps
+  640  nano docker-compose.yml
+  641  sudo docker-compose down 
+  642  ip a
+  643  whereis bash
+  644  /media/alex/VBox_GAs_6.1.38/VBoxLinuxAdditions.run
+  645  sudo /media/alex/VBox_GAs_6.1.38/VBoxLinuxAdditions.run
+  646  where is bash
+  647  whereis bash
+  648  ll
+  649  mkdir test
+  650  cd test
+  651  ll
+  652  touch 1.bak
+  653  touch 1.tmp
+  654  touch 1.backup
+  655  touch 1.zip
+  656  ll
+  657  ~
+  658  cd ~
+  659  nano test.sh
+  660  test.sh
+  661  ./ test.sh 
+  662  ll
+  663  bash test.sh
+  664  nano test.sh
+  665  bash test.sh
+  666  nano test.sh
+  667  bash test.sh
+  668  nano test.sh
+  669  bash test.sh
+  670  nano test.sh
+  671  bash test.sh
+  672  nano test.sh
+  673  bash test.sh
+  674  nano test.sh
+  675  bash test.sh
+  676  nano test.sh
+  677  bash test.sh
+  678  ll
+  679  nano test.sh
+  680  ll
+  681  bash test.sh
+  682  cd test
+  683  pwd
+  684  bash test.sh /home/alex/test
+  685  bash test.sh -/home/alex/test
+  686  bash test.sh /home/alex/test
+  687  ll
+  688  up
+  689  cd ..
+  690  bash test.sh /home/alex/test
+  691  bash test.sh test
+  692  bash test.sh /home/alex/test/
+  693  cd test
+  694  ll
+  695  nano test.sh
+  696  ll
+  697  rm test.sh
+  698  cd ..
+  699  nano test.sh
+  700  bash test.sh
+  701  nano test.sh
+  702  bash test.sh
+  703  bash test.sh /home/alex/test
+  704  bash test.sh test
+  705  ll
+  706  sudo bash test.sh /home/alex/test
+  707  nano test.sh
+  708  sudo bash test.sh /home/alex/test
+  709  cd test
+  710  ll
+  711  bash ownersort.sh /home/alex/test/
+  712  ls
+  713  cat > Домашние животные.txt
+  714  ls
+  715  ls la
+  716  ls -la
+  717  cat > Домашние_животные.txt
+  718  ls -la
+  719  cat > Домашние_животные.txt
+  720  git status
+  721  Домашние_животные.txt
+  722  cd Домашние_животные.txt
+  723  cat Домашние_животные.txt
+  724  ls -la
+  725  cat > Домашние_животные.txt
+  726  ls la
+  727  ls -la
+  728  mkdir itog
+  729  cd itog
+  730  ls -la
+  731  git clone https://github.com/Netix007/animal_kennel.git
+  732  git status
+  733  ls -la
+  734  cd animal_kennel/
+  735  git status
+  736  ls -la
+  737  git remote add upstream https://github.com/Netix007/animal_kennel.git
+  738  git checkout -b linux
+  739  git status
+  740  cat > Домашние_животные.txt
+  741  git status
+  742  mkdir part_linux
+  743  cd
+  744  cd part_linux
+  745  ls -la
+  746  cd itog
+  747  ls -la
+  748  cd animal_kennel/
+  749  mkdir part1_linux
+  750  ls -la
+  751  cd part1_linux/
+  752  cat > Домашние_животные.txt
+  753  cat > Вьючные_животные.txt
+  754  ls -la
+  755  cat Вьючные_животные.txt
+  756  cat Домашние_животные.txtВьючные_животные.txt > test.txt
+  757  cat Домашние_животные.txt Вьючные_животные.txt > test.txt
+  758  cat test.txt
+  759  mv test.txt Друзья_человека.txt
+  760  cd ..
+  761  git status
+  762  git add
+  763  git add --all
+  764  git status
+  765  git commit -m "Выполнено задание №1"
+  766  git status
+  767  git push
+  768  git branch
+  769  git push https://github.com/Netix007/animal_kennel.git
+  770  ls -al ~/.ssh
+  771  cd
+  772  ls -al ~/.ssh
+  773  sudo ls -al ~/.ssh
+  774  git push https://github.com/Netix007/animal_kennel.git
+  775  cd itog/
+  776  cd animal_kennel/
+  777  git push https://github.com/Netix007/animal_kennel.git
+  778  git push
+  779  git status
+  780  git commit -m "Выполнено задание №1"
+  781  git config --global user.email "kino_mac@mail.ru"
+  782  git config --global user.name "Alexandr Mandrikov"
+  783  git commit -m "Выполнено задание №1"
+  784  git push https://github.com/Netix007/animal_kennel.git
+  785  ls -la
+  786  cd part1_linux/
+  787  ls -la
+  788  mkdir Animals
+  789  ls -la
+  790  mv Друзья_человека.txt Animals/
+  791  ls -la
+  792  cd animals
+  793  cd Animals
+  794  ls -la
+  795  cd..
+  796  cd ..
+  797  git status
+  798  git add --all
+  799  git status
+  800  git commit -m "Выполнено задание №2"
+  801  git push https://github.com/Netix007/animal_kennel.git
+  802  sudo apt update
+  803  apt list --upgradable
+  804  cd
+  805  ls -la
+  806  cd test
+  807  ls -la
+  808  wget https://dev.mysql.com/get/mysql-apt-config_0.8.24-1_all.deb
+  809  sudo apt update
+  810  sudo apt-get update
+  811  ls -la
+  812  sudo dpkg -i mysql-apt-config_0.8.24-1_all.deb
+  813  sudo apt-get update
+  814  sudo apt-get install mysql-client
+  815  sudo apt-get install mysql-clicd
+  816  cd
+  817  ls -la
+  818  cd itog/
+  819  cd animal_kennel/
+  820  git status
+  821  git add -a README.md 
+  822  git add -A
+  823  git status
+  824  git commit -m "Выполнено задание №3"
+  825  git status
+  826  git push https://github.com/Netix007/animal_kennel.git
+  827  cd
+  828  cd test/
+  829  ls -la
+  830  sudo apt -f install
+  831  wget https://download.virtualbox.org/virtualbox/7.0.6/virtualbox-7.0_7.0.6-155176~Ubuntu~jammy_amd64.deb
+  832  ls -la
+  833  sudo dpkg -i virtualbox-7.0_7.0.6-155176~Ubuntu~jammy_amd64.deb
+  834  sudo apt -f install
+  835  sudo dpkg -r virtualbox-7.0
+  836  sudo dpkg -i virtualbox-7.0
+  837  sudo dpkg -i virtualbox-7.0_7.0.6-155176~Ubuntu~jammy_amd64.deb
+  838  sudo apt -f install
+  839  cd
+  840  cd itog/
+  841  cd animal_kennel/
+  842  git status
+  843  git add --all
+  844  git commit - m "Выполнено задание №4"
+  845  git commit -m "Выполнено задание №4"
+  846  git push https://github.com/Netix007/animal_kennel.git
+  847  history > part1_linux/commands.txt
