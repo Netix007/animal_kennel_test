@@ -44,3 +44,13 @@ sudo dpkg -i mysql-apt-config_0.8.24-1_all.deb
 sudo apt-get update
 sudo apt-get install mysql-client
 ```
+## Задание 4
+- Установить и удалить deb-пакет с помощью dpkg.
+
+_Список команд для выполнения задания:_
+```
+wget https://download.virtualbox.org/virtualbox/7.0.6/virtualbox-7.0_7.0.6-155176~Ubuntu~jammy_amd64.deb
+sudo dpkg -i virtualbox-7.0_7.0.6-155176~Ubuntu~jammy_amd64.deb
+sudo apt -f install
+sudo dpkg -r virtualbox-7.0
+```
