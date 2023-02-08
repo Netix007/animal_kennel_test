@@ -33,3 +33,14 @@ _Список команд для выполнения задания:_
 mkdir Animals
 mv Друзья_человека.txt Animals/
 ```
+## Задание 3
+-  Подключить дополнительный репозиторий MySQL. Установить любой пакет
+из этого репозитория.
+
+_Список команд для выполнения задания:_
+```
+wget https://dev.mysql.com/get/mysql-apt-config_0.8.24-1_all.deb
+sudo dpkg -i mysql-apt-config_0.8.24-1_all.deb
+sudo apt-get update
+sudo apt-get install mysql-client
+```
