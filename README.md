@@ -135,5 +135,34 @@ INSERT INTO `donkey` (`id`, `pid`, `name`, `birthday`, `comands`) VALUES (NULL, 
 _Список команд для выполнения задания:_
 ```
 DROP TABLE camel;
-INSERT INTO horse (pid, name, birthday, comands) SELECT pid, name, birthday, comands FROM donkey;
+
+CREATE TABLE `human_friends`.`horse_and_donkey` AS SELECT pid, CASE WHEN pid = 'pack_animal' THEN 'horse' END AS pid1, name, birthday, comands FROM horse UNION select pid, CASE WHEN pid = 'pack_animal' THEN 'donkey' END AS pid1, name, birthday, comands FROM donkey;
+
+ALTER TABLE horse_and_donkey ADD `id` INT NOT NULL AUTO_INCREMENT UNIQUE FIRST;
+
+DROP TABLE horse;
+
+DROP TABLE donkey;
+```
+
+## Задание 11
+- Создать новую таблицу “молодые животные” в которую попадут все
+животные старше 1 года, но младше 3 лет и в отдельном столбце с точностью
+до месяца подсчитать возраст животных в новой таблице.
+
+_Список команд для выполнения задания:_
+```
+CREATE TABLE `human_friends`.`young_animals` ( `id` INT(11) NOT NULL AUTO_INCREMENT , `pid` VARCHAR(100) NOT NULL , `pid1` VARCHAR(100) NOT NULL , `name` VARCHAR(100) NOT NULL , `birthday` DATE NULL , `comands` JSON NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB;
+
+INSERT INTO young_animals (pid, pid1, name, birthday, comands) SELECT pid, CASE WHEN pid = 'pet' THEN 'dog' END AS pid1, name, birthday, comands FROM dog WHERE birthday BETWEEN DATE_SUB(CURDATE(),INTERVAL 3 YEAR) AND CURDATE();
+
+INSERT INTO young_animals (pid, pid1, name, birthday, comands) SELECT pid, CASE WHEN pid = 'pet' THEN 'cat' END AS pid1, name, birthday, comands FROM cat WHERE birthday BETWEEN DATE_SUB(CURDATE(),INTERVAL 3 YEAR) AND CURDATE();
+
+INSERT INTO young_animals (pid, pid1, name, birthday, comands) SELECT pid, CASE WHEN pid = 'pet' THEN 'hamster' END AS pid1, name, birthday, comands FROM hamster WHERE birthday BETWEEN DATE_SUB(CURDATE(),INTERVAL 3 YEAR) AND CURDATE();
+
+INSERT INTO young_animals (pid, pid1, name, birthday, comands) SELECT pid, pid1, name, birthday, comands FROM horse_and_donkey WHERE birthday BETWEEN DATE_SUB(CURDATE(),INTERVAL 3 YEAR) AND CURDATE();
+
+ALTER TABLE young_animals ADD COLUMN age VARCHAR(20) NULL;
+
+UPDATE young_animals SET age = CASE WHEN TIMESTAMPDIFF(YEAR, birthday, CURDATE()) = 0 THEN CONCAT(TIMESTAMPDIFF(MONTH, birthday + INTERVAL TIMESTAMPDIFF(YEAR, birthday, CURDATE()) YEAR, CURDATE()), ' month') WHEN TIMESTAMPDIFF(YEAR, birthday, CURDATE()) != 0 THEN CONCAT(TIMESTAMPDIFF(YEAR, birthday, CURDATE()), ' year ', TIMESTAMPDIFF(MONTH, birthday + INTERVAL TIMESTAMPDIFF(YEAR, birthday, CURDATE()) YEAR, CURDATE()), ' month') END;
 ```
