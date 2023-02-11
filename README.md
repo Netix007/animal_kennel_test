@@ -108,3 +108,22 @@ CREATE TABLE `human_friends`.`camel` ( `id` INT(11) NOT NULL AUTO_INCREMENT , `p
 
 CREATE TABLE `human_friends`.`donkey` ( `id` INT(11) NOT NULL AUTO_INCREMENT , `pid` VARCHAR(100) NOT NULL  , `name` VARCHAR(100) NOT NULL , `birthday` DATE NULL , `comands` JSON NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB;
 ```
+
+## Задание 9
+- Заполнить низкоуровневые таблицы именами(животных), командами
+которые они выполняют и датами рождения.
+
+_Список команд для выполнения задания:_
+```
+INSERT INTO `dog` (`id`, `pid`, `name`, `birthday`, `comands`) VALUES (NULL, 'pet', 'Гром', '2019-11-25', NULL), (NULL, 'pet', 'Спарта', '2021-03-22', NULL);
+
+INSERT INTO `cat` (`id`, `pid`, `name`, `birthday`, `comands`) VALUES (NULL, 'pet', 'Тайсон', '2017-09-11', NULL), (NULL, 'pet', 'Кокос', '201-10-20', NULL);
+
+INSERT INTO `hamster` (`id`, `pid`, `name`, `birthday`, `comands`) VALUES (NULL, 'pet', 'Марсик', '2021-12-12', NULL), (NULL, 'pet', 'Пончик', '2022-10-10', NULL);
+
+INSERT INTO `horse` (`id`, `pid`, `name`, `birthday`, `comands`) VALUES (NULL, 'pack_animal', 'Богатырь', '2013-09-03', '[\"Везти груз\"]'), (NULL, 'pack_animal', 'Камелия', '2017-11-22', '[\"Везти груз\"]');
+
+INSERT INTO `camel` (`id`, `pid`, `name`, `birthday`, `comands`) VALUES (NULL, 'pack_animal', 'Ида', '2021-01-15', '[\"Везти груз\"]'), (NULL, 'pack_animal', 'Ланцелот', '2019-08-06', '[\"Везти груз\"]');
+
+INSERT INTO `donkey` (`id`, `pid`, `name`, `birthday`, `comands`) VALUES (NULL, 'pack_animal', 'Нельсон', '2014-11-25', '[\"Везти груз\"]'), (NULL, 'pack_animal', 'Загреб', '2021-05-03', '[\"Везти груз\"]');
+```
