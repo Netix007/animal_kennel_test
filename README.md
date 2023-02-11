@@ -127,3 +127,13 @@ INSERT INTO `camel` (`id`, `pid`, `name`, `birthday`, `comands`) VALUES (NULL, '
 
 INSERT INTO `donkey` (`id`, `pid`, `name`, `birthday`, `comands`) VALUES (NULL, 'pack_animal', 'Нельсон', '2014-11-25', '[\"Везти груз\"]'), (NULL, 'pack_animal', 'Загреб', '2021-05-03', '[\"Везти груз\"]');
 ```
+
+## Задание 10
+- Удалить из таблицы верблюдов, т.к. верблюдов решили перевезти в другой
+питомник на зимовку. Объединить таблицы лошади, и ослы в одну таблицу.
+
+_Список команд для выполнения задания:_
+```
+DROP TABLE camel;
+INSERT INTO horse (pid, name, birthday, comands) SELECT pid, name, birthday, comands FROM donkey;
+```
