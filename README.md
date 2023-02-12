@@ -166,3 +166,25 @@ ALTER TABLE young_animals ADD COLUMN age VARCHAR(20) NULL;
 
 UPDATE young_animals SET age = CASE WHEN TIMESTAMPDIFF(YEAR, birthday, CURDATE()) = 0 THEN CONCAT(TIMESTAMPDIFF(MONTH, birthday + INTERVAL TIMESTAMPDIFF(YEAR, birthday, CURDATE()) YEAR, CURDATE()), ' month') WHEN TIMESTAMPDIFF(YEAR, birthday, CURDATE()) != 0 THEN CONCAT(TIMESTAMPDIFF(YEAR, birthday, CURDATE()), ' year ', TIMESTAMPDIFF(MONTH, birthday + INTERVAL TIMESTAMPDIFF(YEAR, birthday, CURDATE()) YEAR, CURDATE()), ' month') END;
 ```
+
+## Задание 12
+- Объединить все таблицы в одну, при этом сохраняя поля, указывающие на
+прошлую принадлежность к старым таблицам.
+
+_Список команд для выполнения задания:_
+```
+CREATE TABLE `human_friends`.`all_animals` ( `id` INT(11) NOT NULL AUTO_INCREMENT , `pid` VARCHAR(100) NOT NULL , `pid1` VARCHAR(100) NOT NULL , `name` VARCHAR(100) NOT NULL , `birthday` DATE NULL , `comands` JSON NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB;
+
+INSERT INTO all_animals (pid, pid1, name, birthday, comands) SELECT pid, CASE WHEN pid = 'pet' THEN 'dog' END AS pid1, name, birthday, comands FROM dog;
+
+INSERT INTO all_animals (pid, pid1, name, birthday, comands) SELECT pid, CASE WHEN pid = 'pet' THEN 'cat' END AS pid1, name, birthday, comands FROM cat;
+
+INSERT INTO all_animals (pid, pid1, name, birthday, comands) SELECT pid, CASE WHEN pid = 'pet' THEN 'hamster' END AS pid1, name, birthday, comands FROM hamster;
+
+INSERT INTO all_animals (pid, pid1, name, birthday, comands) SELECT pid, pid1, name, birthday, comands FROM horse_and_donkey;
+```
+
+В завершении блока сохраним дамп базы данных, воспользовавшись командой:
+```
+mysqldump -v -h127.0.0.1 -u root -p human_friends > /home/alex/itog/animal_kennel/part3_MYSQL/human_friends.sql
+```
